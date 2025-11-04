@@ -196,8 +196,10 @@ const useCapybaraAudio = () => {
       return
     }
 
-    const clickAudio = new Audio('/sounds/click.mp3')
-    const purchaseAudio = new Audio('/sounds/purchase.mp3')
+    const assetPath = (fileName) => `${import.meta.env.BASE_URL}sounds/${fileName}`
+
+    const clickAudio = new Audio(assetPath('click.mp3'))
+    const purchaseAudio = new Audio(assetPath('purchase.mp3'))
     clickAudio.volume = 0.5
     purchaseAudio.volume = 0.5
 
